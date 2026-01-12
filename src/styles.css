@@ -1,0 +1,296 @@
+/* ================= RESET & BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  background: #0a0a0a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ================= GLOBAL SECTIONS (MOBILE FIRST) ================= */
+section {
+  padding: 56px 20px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  section {
+    padding: 96px 8%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  section {
+    padding: 120px 12%;
+  }
+}
+
+/* Limit content width so screen doesn't look empty */
+/* section > * {
+  max-width: 720px;
+} */
+
+/* Hero can be wider */
+.hero > * {
+  max-width: 860px;
+}
+
+/* Subtle section separation */
+section:not(.hero) {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ================= NAVBAR ================= */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 14px 20px;
+  background: rgba(10, 10, 10, 0.92);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav a {
+  color: #c77dff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 120px; /* navbar offset */
+}
+
+/* Name */
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 7rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero span {
+  color: #c77dff;
+}
+
+/* Typewriter / subtitle */
+.hero h2 {
+  margin-top: 12px;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-weight: 500;
+  color: #bfa7ff;
+  min-height: 36px;
+}
+
+/* Hero description */
+.hero p {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #b5b5b5;
+  max-width: 520px;
+}
+
+/* ================= BUTTON ================= */
+.btn {
+  margin-top: 28px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #c77dff, #9d4edd);
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 220px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(199, 125, 255, 0.35);
+}
+
+/* ================= HEADINGS ================= */
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
+
+/* ================= LISTS (SKILLS) ================= */
+ul {
+  list-style: none;
+  margin-top: 16px;
+}
+
+ul li {
+  padding: 6px 0;
+  font-size: 0.95rem;
+  color: #d0d0d0;
+}
+
+/* ================= PROJECT CARD ================= */
+.card {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+/* ================= CONTACT ================= */
+#contact p {
+  font-size: 0.9rem;
+  color: #cfcfcf;
+}
+
+/* ================= MOBILE POLISH ================= */
+@media (max-width: 480px) {
+  .hero {
+    text-align: left;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  padding: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  background: rgba(199,125,255,0.12);
+}
+
+/* Tablet+ */
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.projects-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 24px;
+  
+}
+
+.project-card {
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #cfcfcf;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.4);
+}
+
+/* Tablet+ */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* Mobile menu */
+.nav-links {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  background: #0a0a0a;
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.nav-links a {
+  color: #c77dff;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.nav-links.open {
+  display: flex;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    background: none;
+    padding: 0;
+  }
+}
